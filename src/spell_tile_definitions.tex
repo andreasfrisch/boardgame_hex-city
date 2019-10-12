@@ -1,0 +1,34 @@
+% Sizes
+\pgfmathsetmacro{\tilewidth}{14}
+\pgfmathsetmacro{\tileheight}{5}
+\pgfmathsetmacro{\spelltextwidth}{\tilewidth-1}
+
+% Shapes
+\def\shapeSpellTile{
+	(-0.5*\tilewidth,0.5*\tileheight) --
+	(0.5*\tilewidth,0.5*\tileheight) --
+	(0.5*\tilewidth,-0.5*\tileheight) --
+	(-0.5*\tilewidth,-0.5*\tileheight) --
+	cycle
+}
+
+% Commands
+\newcommand{\spelltile}{
+  \draw[gray] \shapeSpellTile;
+}
+
+\newcommand{\spellname}[1]{
+  \node [text width=\spelltextwidth cm] at (0, 1.5) {
+    \begin{center}
+      \color{black}{\Large \textbf #1}
+    \end{center}
+  };
+}
+\newcommand{\spelleffect}[1]{
+  \node [text width=\spelltextwidth cm] at (0, 0) {
+    \begin{center}
+      \color{black}{#1}
+    \end{center}
+  };
+}
+

@@ -1,0 +1,95 @@
+\documentclass[a4paper]{article}
+\input{libs.tex}
+\input{spell_tile_definitions.tex}
+
+\begin{document}
+\begin{center}
+\pagestyle{empty}
+\hyphenpenalty=10000
+
+\noindent
+\begin{tikzpicture}
+	\spelltile
+	\spellname{Summon Golem}
+	\spelleffect{
+		Place the golem in a district controlled by you.\\
+		Enemies cannot enter this territory with a move action while the golem is present.
+		Increase uprising by 1.
+		The golem counts as a goon for the controlling player for all intents and purposes.
+		Remove the golem in the end phase, or if it is ever in a district without any goons.
+	}
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\spelltile
+	\spellname{Mass Charm}
+	\spelleffect{Reduce uprising by 1 in any district}
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\spelltile
+	\spellname{Fireball}
+	\spelleffect{
+		Remove up to two enemy goons from any district.\\
+		The enemy my choose to remove street rats instead.
+	}
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\spelltile
+	\spellname{Shield}
+	\spelleffect{
+		Place the shield token in any district.\\
+		No spells can target a district with a shield token.
+		Remove the shield token in the end phase.
+	}
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\spelltile
+	\spellname{Cure Wounds}
+	\spelleffect{Immediately heal up to two of your goons.}
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\spelltile
+	\spellname{Mind Control}
+	\spelleffect{
+		Convert 1 enemy goon into one of your goons.\\
+		If this would trigger a battle, your goon is killed without inflicting casaulties.
+		If this would grant control of an area, also increase uprising by 1.
+	}
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\spelltile
+	\spellname{Chain Lightning}
+	\spelleffect{
+		Remove one goon from any district.\\
+		The player controlling the goon may immediately duplicate this spell by paying the same cost.
+		When duplicating this spell, it must target a goon in an adjacent district.
+		A target of a duplicated spell can also choose to duplicate the spell.
+	}
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\spelltile
+	\spellname{Teleport}
+	\spelleffect{
+		Move any number of goons from one district to any another district.\\
+		This movement may trigger a battle.
+		You may teleport into an area with a golem.
+		This spell costs 1 extra gold per goon moved, if moving enemy goons.
+	}
+\end{tikzpicture}%
+\newline
+\noindent
+\end{center}
+\end{document}
